@@ -4,16 +4,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 import org.apache.log4j.Logger;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 public class FileServiceTest {
 	final static Logger LOGGER = Logger.getLogger(FileServiceTest.class);
-
-	@BeforeEach
-	public void initSeeMap() {
-
-	}
 
 	@Test
 	public void nonEmptyFileShouldBeSavedCorrectly() {

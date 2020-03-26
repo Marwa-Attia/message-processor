@@ -23,7 +23,7 @@ public class SalesProcessorTest {
 
 	@BeforeEach
 	public void initSeeMap() {
-
+		SaleService.getSaleMap().clear();
 	}
 
 	@Test

@@ -8,7 +8,6 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 import java.util.List;
 
 import org.apache.log4j.Logger;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import com.test.message_proccesor.exceptions.InvalidSaleException;
@@ -17,20 +16,17 @@ import com.test.message_proccesor.model.Sale;
 public class SaleServiceTest {
 	final static Logger LOGGER = Logger.getLogger(SaleServiceTest.class);
 
-	@BeforeEach
-	public void initSeeMap() {
-
-	}
 	@Test
 	public void findByProductTypeShouldAlwaysReturnASaleList() {
 		SaleService saleService = new SaleService();
-		List<Sale>sales1=saleService.findByProductType(null);
+		List<Sale> sales1 = saleService.findByProductType(null);
 		assertNotNull(sales1);
-		List<Sale>sales2=saleService.findByProductType("");
+		List<Sale> sales2 = saleService.findByProductType("");
 		assertNotNull(sales2);
-		List<Sale>sales3=saleService.findByProductType("milk");
+		List<Sale> sales3 = saleService.findByProductType("milk");
 		assertNotNull(sales3);
 	}
+
 	@Test
 	public void saleShouldBeSavedCorrectly() {
 		SaleService saleService = new SaleService();
